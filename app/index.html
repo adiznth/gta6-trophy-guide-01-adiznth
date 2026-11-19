@@ -3,23 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Trophy Guide — GTA VI, all 55 PS5 trophies</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, a platinum roadmap, missable flags and a cited guide for every trophy.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="hero">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+  <h1>Leonida Trophy Guide</h1>
+  <p class="lede">Every trophy, its official name, description and grade, a guide in our own words with its sources, and a tracker that remembers what you have earned. Works offline — this page loads nothing from the network.</p>
+  <div class="progress-wrap" aria-label="Progress">
+    <div class="progress-line"><span id="progress-text">0 of 55 earned</span><span id="progress-pct">0%</span></div>
+    <div class="bar"><div id="progress-fill" style="width:0%"></div></div>
+    <p class="grade-counts" id="grade-counts"></p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<main>
+  <section class="warn" id="missable-banner" aria-label="Missable trophy warning">
+    <h2>Read this first: one trophy can be missed</h2>
+    <p><strong>Positive Mental Attitude</strong> is the only trophy reported as possibly missable: one meditation spot — Lucia&rsquo;s balcony in Chapter 1 — disappears after that chapter, and the game has <strong>no mission replay</strong>. Meditate there the first time you can, and keep a manual save at the start of every chapter and one before the final mission. Cheats disable trophies, so leave them off for a trophy run. <span class="cite">Sources: PowerPyx and GTABase, reported by Output Lag; cheats per PowerPyx, reported by Planet GTA 6.</span></p>
+  </section>
+
+  <section class="controls" aria-label="Find and filter trophies">
+    <div class="controls-row">
+      <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="check"><input id="spoilers" type="checkbox" checked> Hide story spoilers</label>
+      <label class="check"><input id="earned-only" type="checkbox"> Earned only</label>
+    </div>
+    <div class="chips" id="kind-chips" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="chip active">All 55</button>
+      <button type="button" data-kind="story" class="chip">Story</button>
+      <button type="button" data-kind="missable" class="chip">Missable</button>
+      <button type="button" data-kind="collectible" class="chip">Collectibles</button>
+      <button type="button" data-kind="activity" class="chip">Activities</button>
+      <button type="button" data-kind="online" class="chip">Online</button>
+    </div>
+    <div class="controls-row">
+      <button id="export" type="button">Export progress (.json)</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+      <button id="reset" type="button">Reset progress</button>
+      <p class="save-note">Progress is saved in this browser (localStorage). Export keeps a copy as a file; import restores it.</p>
+    </div>
+    <p id="list-count" class="list-count"></p>
+  </section>
+
+  <section aria-label="Trophy list">
+    <ol id="list" class="trophy-list"></ol>
+    <p id="empty" class="empty" hidden>No trophies match these filters. There are no online trophies in this list — all 55 unlock in single-player.</p>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Platinum roadmap">
+    <h2>Road to the platinum: <span class="platinum-name">Vice Got a Price!</span></h2>
+    <p class="section-note">Seven stages, in the order to play them. The platinum takes around 200 hours; the story alone takes about 60. <span class="cite">Time estimates: Output Lag; story length per VGC and Push Square, reported by Planet GTA 6.</span></p>
+    <ol id="roadmap-list" class="roadmap-list"></ol>
+  </section>
+
+  <section class="sources" id="sources" aria-label="Sources">
+    <h2>Sources</h2>
+    <p>Official trophy names, descriptions and grades are as PlayStation publishes them, taken from the lists Exophase and PSNProfiles published on 18 November 2026 and cross-checked against each other. Every guide above is written in our own words; the facts it rests on are cited beside it. A source link opens only if you follow it — this page fetches nothing on its own.</p>
+    <ul id="source-list"></ul>
+    <p class="honesty">Eight hidden trophies had no confirmed unlock method at launch, so their guides say so plainly and stick to what the official description says, instead of inventing a method. <span class="cite">Source: Output Lag.</span></p>
+  </section>
+</main>
+
+<footer>
+  <p>Leonida Trophy Guide — an unofficial fan guide. Grand Theft Auto, GTA and Leonida are trademarks of their owners; this guide uses no Rockstar logo, artwork or game screenshots. Data: the official 55-trophy list, 18 November 2026. Works offline.</p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>

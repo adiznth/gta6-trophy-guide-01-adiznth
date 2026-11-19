@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-cover.png","note":"Cover: hero, progress at 5 of 55, the missable warning, filters and the first trophy card.","path":"/","viewport":{"height":800,"width":1280}},{"file":"2-guide.png","note":"The guide open on Positive Mental Attitude, the run's one reported missable trophy, with its sources.","path":"/?open=28&spoilers=off","viewport":{"height":800,"width":1280}},{"file":"3-filters.png","note":"Collectibles filter active: 6 of 55 trophies, two already earned.","path":"/?filter=collectible","viewport":{"height":800,"width":1280}},{"file":"4-roadmap.png","note":"The platinum roadmap, stages 1 to 4, with earned trophies struck through and hidden ones masked.","path":"/?view=roadmap","viewport":{"height":800,"width":1280}}]
